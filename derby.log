@@ -1,0 +1,10 @@
+----------------------------------------------------------------
+Fri Jan 04 09:38:44 CST 2013:
+ 正在使用类加载器 sun.misc.Launcher$AppClassLoader@11e1e67 引导数据库
+目录 C:\Users\hhcsxx1\MyDB  中的 Derby 版本 The Apache Software Foundation - Apache Derby - 10.8.2.2 - (1181258) 实例 a816c00e-013c-0335-d1d8-00000098e838
+
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_05-b06
+user.dir=C:\Users\hhcsxx1\Documents\GitHub\Spring_ORM
+derby.system.home=null
+数据库类装入器已启动 － derby.database.classpath=“”

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN// EN"
+	"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="dataSource"
+       class="org.apache.commons.dbcp.BasicDataSource">
+       <property name="driverClassName">
+           <value>org.apache.derby.jdbc.EmbeddedDriver</value>
+       </property>
+       <property name="url">
+           <value>jdbc:derby:C:\Users\hhcsxx1\MyDB;create=true</value>
+       </property>
+       <property name="username">
+           <value>test</value>
+       </property>
+       <property name="password">
+           <value>test</value>
+       </property>
+    </bean> 
+    
+<!-- 	<bean id="greetingService" -->
+<!-- 		class="net.chuangdie.lhb.test.HelloSpring"> -->
+<!-- 		<property name="greeting"> -->
+<!-- 			<value>Hello Spring</value> -->
+<!-- 		</property> -->
+<!-- 	</bean> -->
+	
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource"><ref bean="dataSource" /></property>
+	</bean>
+	
+	<bean id="shopping" class="net.chuangdie.lhb.bean.Shopping">
+		<property name="jdbcTemplate"><ref bean="jdbcTemplate" /></property>
+	</bean>
+	
+<!-- 	<bean id="transaction" class="net.chuangdie.lhb.bean.Transaction"> -->
+<!-- 		<property name="jdbcTemplate"><ref bean="jdbcTemplate" /></property> -->
+<!-- 	</bean> -->
+</beans>
